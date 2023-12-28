@@ -4,7 +4,7 @@ import { LEVELS } from '../../models/levels.enum';
 import TaskComponent from '../pure/task';
 import '../../styles/task.scss'; //importar estilos 
 import TaskForm from '../pure/forms/taskForm';
-
+ 
 //cuando se haga un llamado a este componente (función) se ejecuta la función y devuelve algo
 const TaskListComponent = () => {
 
