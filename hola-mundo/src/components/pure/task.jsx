@@ -5,7 +5,7 @@ import '../../styles/task.scss'; //añadir estilos
 import { LEVELS } from '../../models/levels.enum';
 
 
-const TaskComponent = ({ task }) => { //recibe un prop llamado task (contenido de una tarea)
+const TaskComponent = ({ task, completed, remove }) => { //recibe un prop llamado task (contenido de una tarea)
 
     useEffect(() => {
         console.log('Task created succesfully');
@@ -37,9 +37,9 @@ const TaskComponent = ({ task }) => { //recibe un prop llamado task (contenido d
      */
     const taskCompletedIcon = () => {
         if (task.completed) {
-            return <i className='bi-toggle-on' style={{ color: 'green', fontSize: 'large' }}></i>
+            return <i onClick={() => { completed(task) }} className='bi-toggle-on task-action' style={{ color: 'green', fontSize: 'large' }}></i>
         } else {
-            return <i className='bi-toggle-off' style={{ color: 'green', fontSize: 'large' }}></i>
+            return <i onClick={() => { completed(task) }} className='bi-toggle-off task-action' style={{ color: 'green', fontSize: 'large' }}></i>
 
         }
     }
@@ -57,7 +57,7 @@ const TaskComponent = ({ task }) => { //recibe un prop llamado task (contenido d
             </td>
             <td className='align-middle'>
                 {taskCompletedIcon()}{/**ejecucion de la funcion de retorno de icono */}
-                <i className='bi-trash' style={{ color: 'tomato', fontSize: 'large' }}></i>
+                <i onClick={() => { remove(task) }} className='bi-trash task-action' style={{ color: 'tomato', fontSize: 'large' }}></i>
             </td>
         </tr>
 
@@ -66,7 +66,9 @@ const TaskComponent = ({ task }) => { //recibe un prop llamado task (contenido d
 
 
 TaskComponent.propTypes = {
-    task: PropTypes.instanceOf(Task),//el prop task sera de tipo clase Task
+    task: PropTypes.instanceOf(Task).isRequired,//el prop task sera de tipo clase Task y la declara como obligatoria
+    completed: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired,
 };
 
 

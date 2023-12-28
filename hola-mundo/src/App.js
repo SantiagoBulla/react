@@ -1,11 +1,10 @@
 
-import logo from './logo.svg';
 import './App.css';
 //import Greeting from './components/pure/greeting';
 //import GreetingF from './components/pure/greetingF';
 //import GreetingStyled from './components/pure/greetingStyled';
 import TaskListComponent from './components/containers/task_list';
-import Father from './components/containers/father';
+//import Father from './components/containers/father';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
 // import { MiComponenteConContexto } from './hooks/Ejemplo3';
@@ -19,7 +18,7 @@ function App() {
       {/*Componente propio greeting.jsx* */}
       {/*<Greeting name="Santiago"></Greeting>{/**la propiedad name recibe la props para el nombre*/}
       {/* <GreetingF name={"Santiago"}></GreetingF> */}
-      {/* <TaskListComponent></TaskListComponent> */}
+      <TaskListComponent></TaskListComponent>
       {/**Ejemplo de uso de Hooks */}
       {/* <Ejemplo1></Ejemplo1> */}
       {/* <Ejemplo2></Ejemplo2> */}
@@ -30,7 +29,7 @@ function App() {
         </Ejemplo4> */}
       {/* <GreetingStyled name='Santiago'></GreetingStyled> */}
       {/**GESTION DE EVENTOS */}
-      <Father></Father>
+      {/* <Father></Father> */}
       {/* </header> */}
     </div>
   );
