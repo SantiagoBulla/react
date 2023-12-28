@@ -44,7 +44,6 @@ const TaskListComponent = () => {
 
     const addTask = (task) => {
         console.log('Remove this task: ', task);
-        const index = tasks.indexOf(task);
         const tempTask = [...tasks];
         tempTask.push(task);
         setTasks(tempTask);
