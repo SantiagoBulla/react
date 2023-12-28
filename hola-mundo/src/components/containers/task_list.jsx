@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enum';
 import TaskComponent from '../pure/task';
+import '../../styles/task.scss'; //importar estilos 
 
 //cuando se haga un llamado a este componente (función) se ejecuta la función y devuelve algo
 const TaskListComponent = () => {
