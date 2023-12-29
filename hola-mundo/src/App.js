@@ -4,6 +4,7 @@ import './App.css';
 //import GreetingF from './components/pure/greetingF';
 //import GreetingStyled from './components/pure/greetingStyled';
 import TaskListComponent from './components/containers/task_list';
+import LoginFormik from './components/pure/forms/loginFormik';
 import OptionalRender from './components/pure/optionalRender';
 //import Father from './components/containers/father';
 // import Ejemplo1 from './hooks/Ejemplo1';
@@ -32,7 +33,9 @@ function App() {
       {/**GESTION DE EVENTOS */}
       {/* <Father></Father> */}
       {/**EJEMPLO DE RENDERIZADO CONDICIONAL */}
-      <OptionalRender></OptionalRender>
+      {/* <OptionalRender></OptionalRender> */}
+      {/**Ejemplo uso formik y yup */}
+      <LoginFormik></LoginFormik>
       {/* </header> */}
     </div>
   );

@@ -44,8 +44,19 @@ const TaskComponent = ({ task, completed, remove }) => { //recibe un prop llamad
         }
     }
 
+    const taskCompleted = {
+        color: 'grey',
+        fontWeight: 'bold',
+        textDecoration: 'line-through'//tachada
+    }
+    const taskUncompleted = {
+        color: 'tomato',
+        fontWeight: 'bold',
+    }
+
+
     return (
-        <tr className='fw-normal'>
+        <tr className='fw-normal' style={task.completed ? taskCompleted : taskUncompleted}>
             <th>
                 <span className='ms-2'>{task.name}</span>
             </th>
