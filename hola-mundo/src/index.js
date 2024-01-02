@@ -6,13 +6,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css';//añadir iconos de bootstrap
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AppRoutingOne from './AppRoutingOne';
+// import AppRoutingOne from './AppRoutingOne';
+import AppRoutingFinal from './AppRoutingFinal';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <AppRoutingOne />
+    <App />
+    {/* <AppRoutingFinal /> */}
   </React.StrictMode>
 );
 
