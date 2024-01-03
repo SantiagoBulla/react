@@ -5,6 +5,7 @@ import './App.css';
 //import GreetingStyled from './components/pure/greetingStyled';
 import TaskListComponent from './components/containers/task_list';
 import AsyncExample from './components/pure/AsyncExample';
+import AxiosExample from './components/pure/AxiosExample';
 import FetchExample from './components/pure/FetchExample';
 import ObservableExmaple from './components/pure/ObservableExmaple';
 import LoginFormik from './components/pure/forms/loginFormik';
@@ -44,7 +45,8 @@ function App() {
       {/**Ejmplos de procesos asincronicos */}
       {/* <AsyncExample></AsyncExample> */}
       {/* <ObservableExmaple></ObservableExmaple> */}
-      <FetchExample></FetchExample>
+      {/* <FetchExample></FetchExample> */}
+      <AxiosExample></AxiosExample>
 
       {/* </header> */}
     </div>
