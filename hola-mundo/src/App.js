@@ -5,6 +5,7 @@ import './App.css';
 //import GreetingStyled from './components/pure/greetingStyled';
 import TaskListComponent from './components/containers/task_list';
 import AsyncExample from './components/pure/AsyncExample';
+import AxiosCRUDExample from './components/pure/AxiosCRUDExample';
 import AxiosExample from './components/pure/AxiosExample';
 import FetchExample from './components/pure/FetchExample';
 import ObservableExmaple from './components/pure/ObservableExmaple';
@@ -46,8 +47,8 @@ function App() {
       {/* <AsyncExample></AsyncExample> */}
       {/* <ObservableExmaple></ObservableExmaple> */}
       {/* <FetchExample></FetchExample> */}
-      <AxiosExample></AxiosExample>
-
+      {/* <AxiosExample></AxiosExample> */}
+      <AxiosCRUDExample></AxiosCRUDExample>
       {/* </header> */}
     </div>
   );
