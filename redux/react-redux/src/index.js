@@ -4,11 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Redux imports
+import { Provider } from 'react-redux';
+//Import config function of app stores
+import { createAppAsyncStore, createAppStore } from './store/config/storeConfig';
+import AppReduxSaga from './AppReduxSaga';
+
+//we create the app store
+//let appStore = createAppStore();
+let appAsyncStore = createAppAsyncStore();
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={appAsyncStore}>
+    <React.StrictMode>
+      {/* <App /> */}
+      <AppReduxSaga />
+    </React.StrictMode>
+  </Provider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
