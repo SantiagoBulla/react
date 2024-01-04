@@ -17,7 +17,7 @@ const miContexto = React.createContext(null);
 const Componente1 = () => {
 
     //inicializar un estado vacío que va a rellenarse con los datos del padre
-    const state = useContext(miContexto);
+    const state = useContext(miContexto);// ese mi contexto viene desde el provider dentro del componente padre
     return (
         <div>
             <h1>El token es: {state.token}</h1>
@@ -30,7 +30,7 @@ const Componente1 = () => {
 
 const Componente2 = () => {
 
-    const state = useContext(miContexto);
+    const state = useContext(miContexto); //contexto heradado del componente 1, en donde este último lo recibio a través del provider
     return (
         <div>
             <h2>La sesión es: {state.session}</h2>
